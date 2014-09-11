@@ -32,14 +32,14 @@
             this.PortComboBox = new System.Windows.Forms.ComboBox();
             this.ConnectButton = new System.Windows.Forms.Button();
             this.LEDcheckBox = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.AnalogVal = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // AnalogReadButton
             // 
-            this.AnalogReadButton.Location = new System.Drawing.Point(218, 126);
+            this.AnalogReadButton.Location = new System.Drawing.Point(183, 137);
             this.AnalogReadButton.Name = "AnalogReadButton";
-            this.AnalogReadButton.Size = new System.Drawing.Size(108, 50);
+            this.AnalogReadButton.Size = new System.Drawing.Size(108, 36);
             this.AnalogReadButton.TabIndex = 0;
             this.AnalogReadButton.Text = "Analog Read";
             this.AnalogReadButton.UseVisualStyleBackColor = true;
@@ -48,33 +48,16 @@
             // PortComboBox
             // 
             this.PortComboBox.FormattingEnabled = true;
-            this.PortComboBox.Items.AddRange(new object[] {
-            "COM1",
-            "COM2",
-            "COM3",
-            "COM4",
-            "COM5",
-            "COM6",
-            "COM7",
-            "COM8",
-            "COM9",
-            "COM10",
-            "COM11",
-            "COM12",
-            "COM13",
-            "COM14",
-            "COM15",
-            "COM16"});
-            this.PortComboBox.Location = new System.Drawing.Point(92, 43);
+            this.PortComboBox.Location = new System.Drawing.Point(27, 45);
             this.PortComboBox.Name = "PortComboBox";
-            this.PortComboBox.Size = new System.Drawing.Size(121, 24);
+            this.PortComboBox.Size = new System.Drawing.Size(114, 24);
             this.PortComboBox.TabIndex = 2;
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(257, 29);
+            this.ConnectButton.Location = new System.Drawing.Point(183, 38);
             this.ConnectButton.Name = "ConnectButton";
-            this.ConnectButton.Size = new System.Drawing.Size(108, 50);
+            this.ConnectButton.Size = new System.Drawing.Size(108, 36);
             this.ConnectButton.TabIndex = 3;
             this.ConnectButton.Text = "Connect";
             this.ConnectButton.UseVisualStyleBackColor = true;
@@ -83,7 +66,7 @@
             // LEDcheckBox
             // 
             this.LEDcheckBox.AutoSize = true;
-            this.LEDcheckBox.Location = new System.Drawing.Point(369, 142);
+            this.LEDcheckBox.Location = new System.Drawing.Point(343, 48);
             this.LEDcheckBox.Name = "LEDcheckBox";
             this.LEDcheckBox.Size = new System.Drawing.Size(57, 21);
             this.LEDcheckBox.TabIndex = 4;
@@ -91,25 +74,27 @@
             this.LEDcheckBox.UseVisualStyleBackColor = true;
             this.LEDcheckBox.CheckedChanged += new System.EventHandler(this.LEDcheckBox_CheckedChanged);
             // 
-            // textBox1
+            // AnalogVal
             // 
-            this.textBox1.Location = new System.Drawing.Point(37, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 22);
-            this.textBox1.TabIndex = 5;
+            this.AnalogVal.Location = new System.Drawing.Point(27, 144);
+            this.AnalogVal.Name = "AnalogVal";
+            this.AnalogVal.ReadOnly = true;
+            this.AnalogVal.Size = new System.Drawing.Size(114, 22);
+            this.AnalogVal.TabIndex = 5;
+            this.AnalogVal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 243);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.AnalogVal);
             this.Controls.Add(this.LEDcheckBox);
             this.Controls.Add(this.ConnectButton);
             this.Controls.Add(this.PortComboBox);
             this.Controls.Add(this.AnalogReadButton);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ArduinoSerialTest";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +106,7 @@
         private System.Windows.Forms.ComboBox PortComboBox;
         private System.Windows.Forms.Button ConnectButton;
         private System.Windows.Forms.CheckBox LEDcheckBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox AnalogVal;
     }
 }
 
