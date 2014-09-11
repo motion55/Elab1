@@ -28,55 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.AnalogReadButton = new System.Windows.Forms.Button();
+            this.PortComboBox = new System.Windows.Forms.ComboBox();
+            this.ConnectButton = new System.Windows.Forms.Button();
+            this.LEDcheckBox = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // AnalogReadButton
             // 
-            this.button1.Location = new System.Drawing.Point(218, 126);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Analog Read";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.AnalogReadButton.Location = new System.Drawing.Point(218, 126);
+            this.AnalogReadButton.Name = "AnalogReadButton";
+            this.AnalogReadButton.Size = new System.Drawing.Size(108, 50);
+            this.AnalogReadButton.TabIndex = 0;
+            this.AnalogReadButton.Text = "Analog Read";
+            this.AnalogReadButton.UseVisualStyleBackColor = true;
+            this.AnalogReadButton.Click += new System.EventHandler(this.AnalogRead_Click);
             // 
-            // comboBox1
+            // PortComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.PortComboBox.FormattingEnabled = true;
+            this.PortComboBox.Items.AddRange(new object[] {
             "COM1",
             "COM2",
             "COM3",
-            "COM4"});
-            this.comboBox1.Location = new System.Drawing.Point(92, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 2;
+            "COM4",
+            "COM5",
+            "COM6",
+            "COM7",
+            "COM8",
+            "COM9",
+            "COM10",
+            "COM11",
+            "COM12",
+            "COM13",
+            "COM14",
+            "COM15",
+            "COM16"});
+            this.PortComboBox.Location = new System.Drawing.Point(92, 43);
+            this.PortComboBox.Name = "PortComboBox";
+            this.PortComboBox.Size = new System.Drawing.Size(121, 24);
+            this.PortComboBox.TabIndex = 2;
             // 
-            // button3
+            // ConnectButton
             // 
-            this.button3.Location = new System.Drawing.Point(257, 29);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 50);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Connect";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.ConnectButton.Location = new System.Drawing.Point(257, 29);
+            this.ConnectButton.Name = "ConnectButton";
+            this.ConnectButton.Size = new System.Drawing.Size(108, 50);
+            this.ConnectButton.TabIndex = 3;
+            this.ConnectButton.Text = "Connect";
+            this.ConnectButton.UseVisualStyleBackColor = true;
+            this.ConnectButton.Click += new System.EventHandler(this.Connect_Click);
             // 
-            // checkBox1
+            // LEDcheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(369, 142);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(57, 21);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "LED";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.LEDcheckBox.AutoSize = true;
+            this.LEDcheckBox.Location = new System.Drawing.Point(369, 142);
+            this.LEDcheckBox.Name = "LEDcheckBox";
+            this.LEDcheckBox.Size = new System.Drawing.Size(57, 21);
+            this.LEDcheckBox.TabIndex = 4;
+            this.LEDcheckBox.Text = "LED";
+            this.LEDcheckBox.UseVisualStyleBackColor = true;
+            this.LEDcheckBox.CheckedChanged += new System.EventHandler(this.LEDcheckBox_CheckedChanged);
             // 
             // textBox1
             // 
@@ -91,10 +104,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(479, 243);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LEDcheckBox);
+            this.Controls.Add(this.ConnectButton);
+            this.Controls.Add(this.PortComboBox);
+            this.Controls.Add(this.AnalogReadButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -104,10 +117,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button AnalogReadButton;
+        private System.Windows.Forms.ComboBox PortComboBox;
+        private System.Windows.Forms.Button ConnectButton;
+        private System.Windows.Forms.CheckBox LEDcheckBox;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
