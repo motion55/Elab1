@@ -1,8 +1,6 @@
 
-int led = 13; 
 char message[10];
 int mess_len;
-char response[10];
 
 // the setup routine runs once when you press reset:
 void setup() {
@@ -10,7 +8,7 @@ void setup() {
   Serial.begin(9600);
   message[0] = 0;
   mess_len = 0;
-  pinMode(led, OUTPUT);     
+  pinMode(LED_BUILTIN, OUTPUT);     
 }
 
 void Parse()
@@ -26,15 +24,20 @@ void Parse()
   case 'B':
     ch = message[1];
     if (ch=='1')
-      digitalWrite(led, HIGH); 
-    else
-      if (ch=='0')
-        digitalWrite(led, LOW); 
+    {
+      digitalWrite(LED_BUILTIN, HIGH); 
+    }
+    else if (ch=='0')
+    {
+      digitalWrite(LED_BUILTIN, LOW); 
+    }
     Serial.println();  
     break;
   }
   message[0] = 0;
   mess_len = 0;
+  delay(10);
+  while (Serial.available()>0) Serial.read();
 }
 
 // the loop routine runs over and over again forever:
@@ -42,8 +45,11 @@ void loop() {
   if(Serial.available() > 0)
   {
     char ch = Serial.read();
-    message[mess_len] = ch;
-    mess_len++; 
+    if (ch>='0')
+    {
+      message[mess_len] = ch;
+      mess_len++; 
+    }
     if(ch==13||mess_len==10)
     {
       Parse();

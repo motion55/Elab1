@@ -53,12 +53,14 @@ namespace Elab1
                 try
                 {
                     _serial_port = new SerialPort(PortComboBox.Text);
+                    _serial_port.DtrEnable = true;
+                    _serial_port.RtsEnable = true;
                     _serial_port.BaudRate = 9600;
                     _serial_port.Parity = Parity.None;
                     _serial_port.StopBits = StopBits.One;
                     _serial_port.DataBits = 8;
                     _serial_port.Handshake = Handshake.None;
-                    _serial_port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler); 
+                    _serial_port.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
                     _serial_port.Open();
                     ConnectButton.Text = "Disconnect";
                     LEDcheckBox.Checked = true;
